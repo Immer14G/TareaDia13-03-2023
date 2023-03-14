@@ -1,0 +1,43 @@
+class Bañario:
+    pass 
+    def __init__(self,Lugares):
+        self.lugares=Lugares
+        
+lugar1=Bañario("Flor del Rio")
+lugar2=Bañario("Aguapar")
+lugar3=Bañario ("Termos del rio")
+-----------------------------------------------------------------------------------------------------------------
+
+from Bañario import lugar1
+from Bañario import lugar2
+from Bañario import lugar3
+
+class invitar():
+    def LugaresConocer():
+        return"Ivan quieres ir a este lugar  {}  junto con nosotros".format(lugar1.lugares)
+    
+    def LugaresConocer2():
+        return"tambien esta este  {} ".format(lugar2.lugares)
+    
+    def LugaresConocer3():
+        return"Ivan o este  {} te parece?".format(lugar3.lugares)
+    
+Pensadolo=invitar
+print(Pensadolo.LugaresConocer())
+print(Pensadolo.LugaresConocer2())
+print(Pensadolo.LugaresConocer3())
+-----------------------------------------------------------------------------------------------------------------
+from Bañario import Bañario
+from Bañario import lugar1
+from Bañario import lugar2
+from Bañario import lugar3
+from invitar import invitar
+from invitar import Pensadolo
+
+class decision(Bañario,invitar):
+
+    def respuestas():
+        return"Entonces que pensaste si iras a {}".format(lugar1.lugares)
+    
+decisionTomada=decision
+print(decisionTomada.respuestas())

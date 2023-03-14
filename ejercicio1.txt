@@ -1,0 +1,40 @@
+class visitas:
+    pass
+    def __init__(self,nombre):
+        self.nombre=nombre
+
+amigos=visitas("Juan")
+amigos2=visitas("Jose")
+
+-------------------------------------------------------------------------------------------------
+from visitas import amigos
+
+class conocido():
+    pass
+    def verAmigo():
+        return"El es mi amigo de tiempos {}".format(amigos.nombre)
+    
+    
+amigoConocido=conocido
+print(amigoConocido.verAmigo())
+
+----------------------------------------------------------------------------------------------------
+from visitas import visitas
+from visitas import amigos
+from visitas import amigos2
+from conocido import  conocido
+from conocido import amigoConocido
+
+class saludar(visitas,conocido):
+    pass
+    def saludarlo():
+       return"Hola {} como te fue en la Universidad".format(amigos.nombre)
+    
+    def saludarlo2():
+        return" el si no lo conozco hola tu nombre es {} cierto?".format(amigos2.nombre)
+    
+    
+ConocidosNiñez=saludar    
+print(ConocidosNiñez.saludarlo())
+print(ConocidosNiñez.saludarlo2())
+print(amigoConocido())
